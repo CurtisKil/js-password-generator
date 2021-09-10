@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Password Creator</title>
+</head>
+<body>
+    <!-- Title
+         Heading
+         Length slider
+         Character choice
+         Create Button
+         Copy to clipboard button
+         "Required" Choices
+         -->
+    <h1>Password Creator</h1>
+    <div class="container">
+        
+        <h2>Create Your Password</h1>  
+            <!-- Dynamically Show Password -->
+        <div id="password" class="password" placeholder="Your Secure Password"></div>
+
+        <div class="form-container">
+            <h2>Select Characters</h2>
+
+            <form class="form">
+                <input type="range" id="slider" class="slider" min="8" max="128" value="50">
+                <p>Value: <span id="slider-value"></span></p>
+                <div id="checkbox-container">
+                    <input type="checkbox" id="special" name="special" value="special">
+                    <label for="special">Special Characters</label>
+
+                    <input type="checkbox" id="numbers" name="numbers" value="numbers">
+                    <label for="numbers">Numbers</label>
+
+                    <input type="checkbox" id="lowercase" name="lowercase" value="lowercase">
+                    <label for="lowercase">Lowercase Letters</label>
+                    
+                    <input type="checkbox" id="uppercase" name="uppercase" value="uppercase">
+                    <label for="uppercase">Uppercase Letters</label>
+                </div>
+                <input class="btn btn1" type="submit" value="Create">
+                
+                <input class="btn btn2" type="submit" value="Copy">
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
