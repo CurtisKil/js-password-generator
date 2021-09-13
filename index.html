@@ -16,33 +16,36 @@
          Copy to clipboard button
          "Required" Choices
          -->
-    <h1>Password Creator</h1>
+    <h1>Password Generator</h1>
     <div class="container">
         
-        <h2>Create Your Password</h1>  
+        <!-- <h2>Create Your Password</h1>   -->
             <!-- Dynamically Show Password -->
         <div id="password" class="password" placeholder="Your Secure Password"></div>
 
         <div class="form-container">
             <h2>Select Characters</h2>
+            
 
             <form class="form">
-                <input type="range" id="slider" class="slider" min="8" max="128" value="50">
-                <p>Value: <span id="slider-value"></span></p>
+                <label for="length" class="length-label">Password Length</label>
+                <br>
+                <input type="number" id="length" class="length min="8" max="128" value="50">
+                <!-- <p>Value: <span id="slider-value"></span></p> -->
                 <div id="checkbox-container">
-                    <input type="checkbox" id="special" name="special" value="special">
-                    <label for="special">Special Characters</label>
+                    <input type="checkbox" id="symbols" name="symbols" value="symbols" checked>
+                    <label for="symbols">Symbols</label>
 
-                    <input type="checkbox" id="numbers" name="numbers" value="numbers">
+                    <input type="checkbox" id="number" name="numbers" value="numbers" checked>
                     <label for="numbers">Numbers</label>
 
-                    <input type="checkbox" id="lowercase" name="lowercase" value="lowercase">
+                    <input type="checkbox" id="lowercase" name="lowercase" value="lowercase" checked>
                     <label for="lowercase">Lowercase Letters</label>
                     
-                    <input type="checkbox" id="uppercase" name="uppercase" value="uppercase">
+                    <input type="checkbox" id="uppercase" name="uppercase" value="uppercase" checked>
                     <label for="uppercase">Uppercase Letters</label>
                 </div>
-                <input class="btn btn1" type="submit" value="Create">
+                <input class="btn btn1" type="submit" value="Generate" id="generate">
                 
                 <input class="btn btn2" type="submit" value="Copy">
             </form>
