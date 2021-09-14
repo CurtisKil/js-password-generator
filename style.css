@@ -62,7 +62,7 @@ h2 {
   margin-bottom: 15px;
 }
 
-#password {
+.password-container {
   width: 845px;
   height: 180px;
   border: solid 1px rgba(211, 211, 211, 0.7);
@@ -71,6 +71,9 @@ h2 {
   justify-content: center;
   margin-bottom: 15px;
   margin-top: 5px;
+  padding-top: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .length {
@@ -83,7 +86,7 @@ input[type="checkbox"] {
   margin: 20px 0;
 }
 
-form label {
+.settings label {
   font-size: 24px;
 }
 

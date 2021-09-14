@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Password Creator</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
     <!-- Title
          Heading
          Length slider
@@ -18,40 +18,70 @@
          -->
     <h1>Password Generator</h1>
     <div class="container">
-        
-        <!-- <h2>Create Your Password</h1>   -->
-            <!-- Dynamically Show Password -->
-        <div id="password" class="password" placeholder="Your Secure Password"></div>
+      <!-- Dynamically Show Password -->
+      <div class="password-container">
+           <span
+        id="password"
+        class="password"
+      ></span>
+      </div>
+   
 
-        <div class="form-container">
-            <h2>Select Characters</h2>
-            
+        <h2>Select Characters</h2>
 
-            <form class="form">
-                <label for="length" class="length-label">Password Length</label>
-                <br>
-                <input type="number" id="length" class="length min="8" max="128" value="50">
-                <!-- <p>Value: <span id="slider-value"></span></p> -->
-                <div id="checkbox-container">
-                    <input type="checkbox" id="symbols" name="symbols" value="symbols" checked>
-                    <label for="symbols">Symbols</label>
+        <div class="settings">
+          <label class="length-label">Password Length</label>
+          <br />
+          <input type="number" id="length" class="length min="8" max="75"
+          value="50">
+          <div id="checkbox-container">
+            <input
+              type="checkbox"
+              id="numbers"
+              name="symbols"
+              value="symbols"
+              checked
+            />
+            <label>Symbols</label>
 
-                    <input type="checkbox" id="number" name="numbers" value="numbers" checked>
-                    <label for="numbers">Numbers</label>
+            <input
+              type="checkbox"
+              id="symbols"
+              name="numbers"
+              value="numbers"
+              checked
+            />
+            <label for="numbers">Numbers</label>
 
-                    <input type="checkbox" id="lowercase" name="lowercase" value="lowercase" checked>
-                    <label for="lowercase">Lowercase Letters</label>
-                    
-                    <input type="checkbox" id="uppercase" name="uppercase" value="uppercase" checked>
-                    <label for="uppercase">Uppercase Letters</label>
-                </div>
-                <input class="btn btn1" type="submit" value="Generate" id="generate">
-                
-                <input class="btn btn2" type="submit" value="Copy">
-            </form>
+            <input
+              type="checkbox"
+              id="lowercase"
+              name="lowercase"
+              value="lowercase"
+              checked
+            />
+            <label>Lowercase Letters</label>
+
+            <input
+              type="checkbox"
+              id="uppercase"
+              name="uppercase"
+              value="uppercase"
+              checked
+            />
+            <label>Uppercase Letters</label>
+          </div>
+          <button
+            class="btn btn1"
+            type="submit"
+            id="generate"
+          />Generate</button>
+
+          <button class="btn btn2" type="submit" value="Copy" />Copy</button>
         </div>
+     
     </div>
 
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
