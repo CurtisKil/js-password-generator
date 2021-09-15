@@ -27,12 +27,12 @@ body::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.4);
 }
 
 .container {
-  width: 1000px;
+  width: 60%;
   height: 65vh;
   background-color: rgba(87, 47, 47, 0.5);
   margin-bottom: auto;
@@ -60,10 +60,12 @@ h1 {
 h2 {
   font-size: 35px;
   margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .password-container {
-  width: 845px;
+  width: 85%;
   height: 180px;
   border: solid 1px rgba(211, 211, 211, 0.7);
   border-radius: 15px;
@@ -77,13 +79,13 @@ h2 {
 }
 
 .length {
-  width: 8%;
+  width: 47px;
   font-size: 20px;
   margin-top: 10px;
 }
 
-input[type="checkbox"] {
-  margin: 20px 0;
+.settings {
+  width: 85%;
 }
 
 .settings label {
@@ -93,11 +95,8 @@ input[type="checkbox"] {
 input[type="checkbox"] {
   width: 18px;
   height: 18px;
+  margin: 20px 0;
 }
-
-/* input[type = 'checkbox']:checked {
-    background-color:  black !important;
-} */
 
 .btn {
   width: 28%;
@@ -109,29 +108,83 @@ input[type="checkbox"] {
 .btn:hover {
   cursor: pointer;
   transform: scale(1.1);
-  /* color: #fff; */
-  /* background-color: rgba(0, 0, 0, 0.5); */
 }
 
 .btn1 {
-  margin-left: 180px;
+  margin-left: 20%;
   margin-right: 20px;
 }
 
-@media screen and (max-width: 843px) {
+/* Media Queries */
+
+/* Mobile */
+@media screen and (max-width: 376px) {
+  h1 {
+    font-size: 34px;
+    margin-bottom: 5px;
+  }
+
   .container {
-    width: 300px;
+    width: 80%;
+    height: 85vh;
   }
 
-  #password {
-    width: 300px;
+  h2 {
+    display: none;
   }
 
-  #checkbox-container {
+  .settings label {
+    font-size: 22px;
     display: flex;
     flex-direction: column;
+    margin: 6px 0;
   }
 
-  input {
+  .length-label {
+    margin: 0;
+    padding-right: 0;
+    display: block;
+  }
+
+  .length {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  input[type="checkbox"] {
+    width: 18px;
+    height: 16px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .btn {
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  .settings {
+    width: 80%;
+  }
+  .btn1 {
+    margin-left: 20%;
+  }
+  #length {
+    width: 10%;
+  }
+}
+
+/* Large screens */
+@media screen and (min-width: 1680px) {
+  body {
+    max-height: 90vh;
+  }
+
+  body::before {
+    max-height: 100vh;
   }
 }
